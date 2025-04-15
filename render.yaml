@@ -6,4 +6,4 @@ services:
     startCommand: gunicorn spamDetection.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: thespamDetection.settings
+        value: spamDetection.settings
