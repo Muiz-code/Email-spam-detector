@@ -1,9 +1,9 @@
 services:
   - type: web
     name: email-spam-detector
-    env: python
+    runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn spamDetection.thespamDetection.wsgi:application
+    startCommand: gunicorn spamDetection.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: spamDetection.settings
+        value: thespamDetection.settings
