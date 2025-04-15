@@ -5,7 +5,7 @@ services:
     build:
       context: .
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn spamDetection.wsgi:application
+    startCommand: gunicorn spamDetection.spamDetection.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: spamDetection.settings
