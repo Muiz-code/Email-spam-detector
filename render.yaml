@@ -2,8 +2,6 @@ services:
   - type: web
     name: email-spam-detector
     env: python
-    build:
-      context: .
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn spamDetection.spamDetection.wsgi:application
     envVars:
